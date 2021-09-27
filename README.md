@@ -1,1 +1,1 @@
-# Wordpress Theme Aquila Kili
+# Wordpress Theme AquilaKili
