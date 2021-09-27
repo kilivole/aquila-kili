@@ -3,11 +3,11 @@
 namespace AQUILAKILI_THEME\Inc\Traits;
 
 trait Singleton {
-    public function __construct() {
+    protected function __construct() {
 
     }
 
-    public function __clone() {
+    final protected function __clone() {
 
     }
 
@@ -19,7 +19,7 @@ trait Singleton {
         if(!isset( $instance[ $called_class] )) {
             $instance[ $called_class ] = new $called_class();
 
-            do_action( sprintf ('aquilakili_theme_singleton_init%s', $called_class));
+            do_action( sprintf ('aquilakili_theme_singleton_init_%s', $called_class));
         }
 
         return $instance[ $called_class ];

@@ -5,7 +5,7 @@
  * @package AquilaKili
  */
 
- namespace AquilaKili_Theme\Inc;
+ namespace AQUILAKILI_THEME\Inc;
 
  use AQUILAKILI_THEME\Inc\Traits\Singleton;
 
@@ -50,7 +50,7 @@
 
         $child_menus = [];
 
-        if ( ! empty( $menu_array ) && is_arry( $menu_array )) {
+        if ( ! empty( $menu_array ) && is_array( $menu_array )) {
             foreach ( $menu_array as $menu ) {
                 if ( intval( $menu->$menu_item_parent ) === $parent_id ) {
                     array_push( $child_menus, $menu );

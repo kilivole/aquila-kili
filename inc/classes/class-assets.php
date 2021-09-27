@@ -5,7 +5,7 @@
  * @package AquilaKili
  */
 
- namespace AquilaKili_Theme\Inc;
+ namespace AQUILAKILI_THEME\Inc;
 
  use AQUILAKILI_THEME\Inc\Traits\Singleton;
 
@@ -16,7 +16,7 @@
      protected function __construct() {
         // load class.
 
-        Assets::get_instance();
+       // Assets::get_instance();
 
         $this->setup_hooks();
     } 
@@ -26,8 +26,8 @@
          * Actions.
          */
 
-        add_action('wp_enqueue_scripts', [$this, 'register_styles']);
-        add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
+        add_action( 'wp_enqueue_scripts', [ $this, 'register_styles' ] );
+        add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ] );
 
 
     }

@@ -6,7 +6,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="<?php language_attributes()?>">
+<html <?php language_attributes()?>>
     <head>
         <title></title>
         <meta charset="UTF-8">

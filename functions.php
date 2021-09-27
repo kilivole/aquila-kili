@@ -9,21 +9,16 @@ if (! defined( 'AQUILAKILI_DIR_PATH' ) ) {
 }
 
 if (! defined( 'AQUILAKILI_DIR_URI' )){
-    define('AQUILAKILI_DIR_PATH', untrailingslashit( get_template_directory_uri() ));
+    define('AQUILAKILI_DIR_URI', untrailingslashit( get_template_directory_uri() ));
 }
 
+
 require_once AQUILAKILI_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once AQUILAKILI_DIR_PATH . '/inc/helpers/template-tags.php';
+
 
 function aquilakili_get_theme_instance(){
     \AQUILAKILI_THEME\Inc\AQUILAKILI_THEME::get_instance();
-
 }
 
-    function kili_enqueue_scripts() {
-
-
-
-    }
-    add_action('wp_enqueue_scripts', 'kili_enqueue_scripts');
-
-?>
+ aquilakili_get_theme_instance();
